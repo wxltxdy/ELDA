@@ -1,0 +1,39 @@
+name: lda4rec
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.8
+  - pip
+  # BASICS
+  - numpy
+  - scipy
+  - pingouin
+  - pandas
+  - pytorch
+  - tqdm
+  - click
+  - pyyaml
+  - requests
+  - ipython
+  - matplotlib
+  - seaborn
+  - h5py  # for reading the Goodbooks dataset
+  - psutil # for neptune hardware metrics
+  - pip:
+     - -e .  # install git checkout of lda4rec in editable mode
+     - icecream
+     - pyro-ppl
+     - neptune-client>=0.9
+     - rankereval # replace evaluations.py later with it
+     - daft  # only for plotting the graphical models
+  # DEVELOPMENT ONLY PACKAGES (could also be kept in a separate environment file)
+  - jupyterlab
+  - pytest
+  - pytest-cov
+  - tox
+  - pre_commit
+  - nbdime
+  - nbstripout
+  - sphinx
+  - recommonmark
